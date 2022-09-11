@@ -13,3 +13,16 @@ else :
         print("Exame") 
     else:
         print("Reprovado")
+
+#Estruturas de repetição
+# Fazer calculadora while
+numero = int(input("Insira o numero para saber a tabuada: "))
+
+i = 1
+
+while i <= 10:
+    print(
+        "{0} X {1} = ".format(numero, i),
+        i * numero
+    )
+    i = i+1
