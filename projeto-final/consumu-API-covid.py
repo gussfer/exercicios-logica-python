@@ -40,7 +40,8 @@ with open('brasil-covid.csv', 'w', newline='') as new_arquivo:
 import datetime as dt
 for i in range(1, len(final_data)): # para o indice dentro do range da posição 1 até o tam da lista
     final_data[i][DATA] = dt.datetime.strptime(final_data[i][DATA],'%Y-%m-%d') # função que retorna um objeto datetime ao inves de str
-final_data
+
+print(final_data)
 
 
 
