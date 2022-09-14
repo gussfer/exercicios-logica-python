@@ -1,5 +1,8 @@
 import requests as r
 import csv
+import seaborn as sns
+import datetime as dt
+
 # setando a requisição: A API alvo retorna um json. Cada dicionário contem chaves valores contendo dados no padrão chave-valor
 url = 'https://api.covid19api.com/dayone/country/brazil'
 req = r.get(url)
@@ -37,11 +40,16 @@ with open('brasil-covid.csv', 'w', newline='') as new_arquivo:
     writer.writerow(final_data)
 
 # manipulações dos dados - transformando string data em formato data (biblioteca DateTime) 
-import datetime as dt
 for i in range(1, len(final_data)): # para o indice dentro do range da posição 1 até o tam da lista
     final_data[i][DATA] = dt.datetime.strptime(final_data[i][DATA],'%Y-%m-%d') # função que retorna um objeto datetime ao inves de str
 
 print(final_data)
+
+#construindo um gráfico de barras - eixo y: confirmados e recuperados; eixo x: 
+
+
+
+
 
 
 
